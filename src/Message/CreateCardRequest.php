@@ -72,6 +72,10 @@ class CreateCardRequest extends AbstractRequest
             $data['description'] = $this->getDescription();
         }
 
+        if (!is_null($this->getValidate())) {
+            $data['validate'] = $this->getValidate();
+        }
+
         if ($this->getSource()) {
             $data['source'] = $this->getSource();
         } elseif ($this->getCardReference()) {

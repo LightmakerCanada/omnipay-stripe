@@ -107,7 +107,8 @@ abstract class AbstractGateway extends AbstractOmnipayGateway
     {
         return array(
             'apiKey' => '',
-            'stripeVersion' => null
+            'stripeVersion' => null,
+            'validate' => 'true'
         );
     }
 

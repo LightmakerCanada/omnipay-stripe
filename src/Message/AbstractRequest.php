@@ -210,6 +210,24 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * @return boolean
+     */
+    public function getValidate()
+    {
+        return $this->getParameter('validate');
+    }
+
+    /**
+     * Set whether to validate requests.
+     *
+     * @return AbstractRequest provides a fluent interface.
+     */
+    public function setValidate($value)
+    {
+        return $this->setParameter('validate', $value);
+    }
+
+    /**
      * @return array
      */
     public function getHeaders()
